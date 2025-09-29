@@ -1,0 +1,9 @@
+version: '1.0'
+services:
+  gpautomation:
+    build: ./
+    # image: automation 
+    volumes:
+      - /var/seamless/log/ss-ui-automation/cypress/reports/:/ss-ui-automation/cypress/reports/
+    stdin_open: true
+    tty: true

@@ -1,0 +1,3 @@
+resellerId,recipientMobileNo,amount,comment,externalClientReference
+MD1,249100000001,100,Monthly stock,EXT123,CREDIT_TRANSFER
+MD2,249100000002,110,Bonus stock,EXT456,CREDIT_TRANSFER

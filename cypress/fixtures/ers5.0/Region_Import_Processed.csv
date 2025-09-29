@@ -1,0 +1,9 @@
+level,parentRegionName,id,regionName,data,location,distributor,ovaAccount,cluster
+1,,Southern,Southern,,,,,
+1,,East,East,,,,,
+2,Southern,Adila,Adila,,,,,
+2,East,Assalaya,Assalaya,,,,,
+3,Adila,Yassin,Yassin,,,,,
+3,Assalaya,Schearia,Schearia,,,,,
+4,Yassin,Zalingei,Zalingei,,,,,
+4,Schearia,Nertiti,Nertiti,,,,,

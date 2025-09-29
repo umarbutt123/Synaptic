@@ -1,0 +1,4 @@
+typeOfTransaction,recipientMobileNo,anonymousId,amount,paymentMethod,comment
+TOPUP,467000000011,,12,Cash,Test
+TOPUP,467000000012,,10,Cash,Test
+TOPUP,467000000013,,15,Cash,Test

@@ -1,0 +1,60 @@
+
+const { defineConfig } = require('cypress');
+
+module.exports = defineConfig({
+  "chromeWebSecurity": false,
+  "requestTimeout": 150000,
+  "responseTimeout": 150000,
+  "pageLoadTimeout": 150000,
+  "video": false,
+  "viewportWidth": 1366,
+  "viewportHeight": 768,
+  "defaultCommandTimeout": 9000,
+  "screenshotsFolder": "cypress/reports/mochareports/assets",
+  "screenshotOnRunFailure": true,
+  "reporter": "cypress-multi-reporters",
+  "watchForFileChanges": false,
+  "retries": {
+    // Configure retry attempts for `cypress run`
+    // Default is 0
+    "runMode": 1,
+    // Configure retry attempts for `cypress open`
+    // Default is 0
+    "openMode": 0
+  },
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": false,
+      "html": true,
+      "json": true
+    }
+  },
+  "numTestsKeptInMemory": 0,
+  "experimentalMemoryManagement": true,
+  "env": {
+    "hostname": "10.10.4.195",
+    "lighthouse": false,
+    "accessibility": 50,
+    "performance": 5,
+    "seo": 10,
+    "host": "10.10.4.195",
+    "db": {
+      "host": "10.10.4.195",
+      "user": "refill",
+      "password": "refill"
+    },
+    "TAGS": "@ss-bulk1"
+  },
+  "e2e": {
+    "specPattern": "**/*.feature",
+    setupNodeEvents(on, config) {
+      return require('./cypress/plugins/index.js')(on, config);
+    },
+    "baseUrl": "http://10.10.4.195/",
+    "excludeSpecPattern": ["*.js", "*.md"],
+    "experimentalSessionAndOrigin": true
+  }
+});
