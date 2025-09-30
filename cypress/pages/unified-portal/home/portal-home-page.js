@@ -1,4 +1,4 @@
-const USER_NAME_FIELD = "//div[@id='seamless-unified-toolbar']/div/label";
+const USER_NAME_FIELD = "//span[@class='company-name']";
 const LOGOUT_FIELD = "//li[contains(text(),'Logout') or contains(text(),'Deconnecter')]";
 const CLICK_USERNAME = "//div[@id='seamless-unified-toolbar']/button[@type='button'][2]";
 const CLICK_CHANGE_PASSWORD = "//li[text()='Change Password']";

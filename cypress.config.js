@@ -46,14 +46,14 @@ module.exports = defineConfig({
       "user": "refill",
       "password": "refill"
     },
-    "TAGS": "@ss-bulk1"
+    "TAGS": "@login1"
   },
   "e2e": {
     "specPattern": "**/*.feature",
     setupNodeEvents(on, config) {
       return require('./cypress/plugins/index.js')(on, config);
     },
-    "baseUrl": "http://10.10.4.195/",
+    "baseUrl": "https://app-synaptic-flow-centraus-dev-gbbthuceaqbrdgf8.centralus-01.azurewebsites.net/login",
     "excludeSpecPattern": ["*.js", "*.md"],
     "experimentalSessionAndOrigin": true
   }

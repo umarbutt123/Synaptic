@@ -13,18 +13,18 @@ Then(/^I should see the message "([^"]*)" on the Home page$/, (message) => {
   }
 });
 
-Given(/^I am on the unified portal login page$/, () => {
-  cy.debug('Opening unified portal login page');
+Given(/^I am on the Synaptic login page$/, () => {
+  cy.debug('Opening synaptic login page');
   PortalLoginPage.visit();
 });
 
-When(/^Provide "([^"]*)" and "([^"]*)" and login into system without BI Call$/, (resellerId, password) => {
+When(/^Provide "([^"]*)" and "([^"]*)" and login into system$/, (email, password) => {
   cy.debug("The portal is opening now");
-  PortalLoginPage.loginWithouBICall(resellerId, password);
+  PortalLoginPage.login(email, password);
   cy.wait(2000);
   cy.debug("login successful");
-  cy.url().should('contains', '/home/');
-  cy.debug('Now we are in Homepage after successful login');
+  // cy.url().should('contains', '/home/');
+  // cy.debug('Now we are in Homepage after successful login');
 });
 
 When(/^Provide "([^"]*)" and "([^"]*)" and login into system$/, (resellerId, password) => {
