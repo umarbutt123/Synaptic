@@ -8,7 +8,8 @@ const ENTER_CONFIRM_PASSWORD = "//input[@name='confirmPassword']";
 const CLICK_UPDATE_BUTTON = "//button/span[text()='Update']";
 const USERNAME = "(//input[@id= 'userId'])[1]";
 const PASSWORD = "//*[@id='password']";
-const LOGIN_BUTTON = "//*[@id='login-form-submit-button']/span[1]";
+// const LOGIN_BUTTON = "//*[@id='login-form-submit-button']/span[1]";
+const LOGIN_BUTTON = "//button[@label='Log In']"
 const HAVING_TROUBLE_SIGNING_IN = "//a[@href='/login/recovery']";
 const RECOVERY_HEADER = "//h1[text() = 'Recover your account']";
 const FORGOT_PASSWORD = "//p[text() = 'Forgot Password ?']";
@@ -139,6 +140,13 @@ class PortalHomePage {
     cy.xpath(LOGIN_BUTTON).click();
     cy.wait(1000);
   }
+
+  static validateLoginButton() {
+    cy.log('click on login button');
+    cy.xpath(LOGIN_BUTTON).should('be.disabled');
+    cy.wait(1000);
+  }
+
 
   static clickSMSOption() {
     cy.log('click on sms option');

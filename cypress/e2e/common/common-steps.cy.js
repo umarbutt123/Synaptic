@@ -129,21 +129,21 @@ And(/^I disable & enable the individual table column "([^"]*)" view and verify a
   CommonUtilities.verifyIndividualColumnEnabled(tableColumnName);
 });
 
-When(/^Provide "([^"]*)" and "([^"]*)" and login into system with invalid user$/, (resellerId, password) => {
+When(/^Provide "([^"]*)" and "([^"]*)" and login into system with invalid user$/, (email, password) => {
   cy.debug("The portal is opening now");
-  PortalLoginPage.loginWithInValidUser(resellerId, password);
+  PortalLoginPage.login(email, password);
   cy.debug("login unsuccessful");
 });
 
-When(/^Provide "([^"]*)" and "([^"]*)" and login into system with invalid password$/, (resellerId, password) => {
+When(/^Provide "([^"]*)" and "([^"]*)" and login into system with invalid password$/, (email, password) => {
   cy.debug("The portal is opening now");
-  PortalLoginPage.loginWithInValidPassword(resellerId, password);
+  PortalLoginPage.login(email, password);
   cy.debug("login unsuccessful");
 });
 
-When(/^Provide "([^"]*)" and login into system with blank userId$/, (resellerId) => {
+When(/^Provide "([^"]*)" and login into system with blank userId$/, (email) => {
   cy.debug("The portal is opening now");
-  PortalLoginPage.loginWithBlankUser(resellerId);
+  PortalLoginPage.loginWithBlankCredentials(email);
   cy.debug("login unsuccessful");
 });
 
@@ -189,6 +189,10 @@ When(/^I enter password "([^"]*)"$/, (password) => {
 
 When(/^I click on Login button$/, () => {
   PortalHomePage.clickLoginButton();
+});
+
+Then(/^I validate Login button is disabled$/, () => {
+  PortalHomePage.validateLoginButton();
 });
 
 When(/^Session is enabled for user "([^"]*)" and password "([^"]*)"$/, (username, password) => {

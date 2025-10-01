@@ -19,7 +19,11 @@ class PortalLoginPage {
     cy.xpath(LOGIN_BUTTON, { timeout: ELEMENT_TIMEOUT }).click();
   }
 
-
+  static loginWithBlankCredentials(username) {
+    cy.wait(1000);
+    cy.xpath(USER_ID_FIELD, { timeout: ELEMENT_TIMEOUT }).clear().type(username);
+    cy.xpath(ACCEPT_TERMS, { timeout: ELEMENT_TIMEOUT }).click();
+  }
 
   static loginWithBlockedUser(username, password) {
     cy.log(`username ${username}passowrd${password}`);

@@ -1,4 +1,5 @@
-const MESSAGE_ALERT = '//div[@id="notistack-snackbar"]';
+// const MESSAGE_ALERT = '//div[@id="notistack-snackbar"]';
+const MESSAGE_ALERT = "//div[contains(text(),'Invalid credentials')]"
 const FILTER = "//span[@class='MuiButton-label' and contains(text(),'Filters')]";
 const COLUMN_SELECT = "//select[@id='columns-filter-select']";
 const OPERATOR_SELECT = "//select[@id='columns-operators-select']";
@@ -26,9 +27,9 @@ class CommonUtilities {
       expect(text).to.contains(message);
     });
     // cy.log("Closing alert message ");
-    cy.xpath(CLOSE_ALERTMESSAGE, { timeout: 10000 }).each(($el, index, $list) => {
-      cy.wrap($el).click();
-    });
+    // cy.xpath(CLOSE_ALERTMESSAGE, { timeout: 10000 }).each(($el, index, $list) => {
+    // cy.wrap($el).click();
+    // });
     // cy.xpath(CLOSE_ALERTMESSAGE).click({ multiple: true });
     // cy.log("It is done");
   }
