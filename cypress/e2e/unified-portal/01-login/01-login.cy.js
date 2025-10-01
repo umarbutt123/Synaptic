@@ -1,9 +1,6 @@
 import { Then, When, And } from 'cypress-cucumber-preprocessor/steps';
 import PortalHomePage from '../../../pages/unified-portal/home/portal-home-page';
-import resellerGeneralInfo from '../../../pages/unified-portal/reseller/reseller_general_info';
 import PortalLoginPage from '../../../pages/unified-portal/login/portal-login-page';
-import ResellerHomePage from '../../../pages/unified-portal/reseller/reseller_home_page';
-import PasswordPolicyPage from '../../../pages/unified-portal/reseller/password_policy_page';
 import CommonUtilities from "../../../common/Util";
 
 When(/^I perform Change Password operation having following parameters "([^"]*)" "([^"]*)" "([^"]*)"$/, (password, newPassword, confirmPassword) => {
