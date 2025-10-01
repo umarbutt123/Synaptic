@@ -1,7 +1,7 @@
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps';
-import PortalLoginPage from '../../pages/unified-portal/login/portal-login-page';
+import PortalLoginPage from '../../pages/synaptic-portal/login/portal-login-page';
 import CommonUtilities from '../../common/Util';
-import PortalHomePage from '../../pages/unified-portal/home/portal-home-page';
+import PortalHomePage from '../../pages/synaptic-portal/home/portal-home-page';
 import Util from 'lighthouse/lighthouse-core/util-commonjs';
 
 Then(/^I should see the message "([^"]*)" on the Home page$/, (message) => {

@@ -1,4 +1,4 @@
-# Cypress - Cucumber Unified Portal UI Automation test
+# Cypress - Cucumber Synaptic Portal UI Automation test
 
 ## Prereqisite
 
@@ -27,8 +27,8 @@ Run following command:
 
 ## Code Structure
 
-- cypress/e2e/unified-portal : Contains customer spesific feature file.
-- cypress/pages/unified-portal : Contains unified portal specific pages and its implementaion.
+- cypress/e2e/synaptic-portal : Contains customer spesific feature file.
+- cypress/pages/synaptic-portal : Contains synaptic portal specific pages and its implementaion.
 - cypress/e2e/step_definitions : Contains all feature wise step definition file.
 
 Run Test Case using Following Command (It will run test on 10.91.10.183 if we pass value as baseUrl=http://10.91.10.183/):
